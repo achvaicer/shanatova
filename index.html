@@ -2,7 +2,6 @@
 <html>
   <head>
     <title>Yay!</title>
-    <link href='http://fonts.googleapis.com/css?family=Lato:600' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Yellowtail' rel='stylesheet' type='text/css'>
     <style>
     html, body {
@@ -99,7 +98,7 @@
         <img src="cover.jpg" width="400" />
       </div>
       <div id="contents">
-        <p>Queridos xxx,</p>
+        <p id="to"></p>
         <h1>Desejamos um Shana Tova, Umetuka</h1>
         <p>De</p>
         <cite><chvaicers>David, Renata e Alberto (Betinho)</chvaicers></cite>
@@ -108,5 +107,10 @@
       </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script language="javascript">
+        var hash = window.location.hash && window.location.hash[0] == "#" ? window.location.hash.substr(1) : window.location.hash;
+        var to = hash ? atob(hash) : "Queridos amigos";
+        $("#to").text(to);
+    </script>
   </body>
 </html>
